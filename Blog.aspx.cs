@@ -7,7 +7,7 @@ namespace WebApplication4
 {
     public partial class Blog : System.Web.UI.Page
     {
-        private readonly string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\GOKHUL.K\source\repos\WebApplication4\WebApplication4\App_Data\Database1.mdf;Integrated Security=True";
+        private readonly string connectionString = @"Connection String";
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -56,7 +56,7 @@ namespace WebApplication4
             try
             {
                 var emailMessage = new MimeMessage();
-                emailMessage.From.Add(new MailboxAddress("Blog Support", "themidoriya123@gmail.com"));
+                emailMessage.From.Add(new MailboxAddress("Blog Support", ""));
                 emailMessage.To.Add(new MailboxAddress(name, email));
                 emailMessage.Subject = "Confirmation of Your Blog Comment";
 
@@ -76,7 +76,7 @@ namespace WebApplication4
                 using (var smtpClient = new SmtpClient())
                 {
                     smtpClient.Connect("smtp.gmail.com", 587, false);
-                    smtpClient.Authenticate("themidoriya123@gmail.com", "hotp pywg ywbe qccj");
+                    smtpClient.Authenticate("", "");
                     smtpClient.Send(emailMessage);
                     smtpClient.Disconnect(true);
                 }
