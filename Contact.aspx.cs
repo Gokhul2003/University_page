@@ -59,7 +59,7 @@ namespace WebApplication4
             try
             {
                 var emailMessage = new MimeMessage();
-                emailMessage.From.Add(new MailboxAddress("University Support", "themidoriya123@gmail.com"));
+                emailMessage.From.Add(new MailboxAddress("University Support", ""));
                 emailMessage.To.Add(new MailboxAddress(name, email));
                 emailMessage.Subject = "Confirmation of Your Message Submission";
 
@@ -78,7 +78,7 @@ namespace WebApplication4
                 using (var smtpClient = new MailKit.Net.Smtp.SmtpClient())
                 {
                     smtpClient.Connect("smtp.gmail.com", 587, false);
-                    smtpClient.Authenticate("themidoriya123@gmail.com", "hotp pywg ywbe qccj");
+                    smtpClient.Authenticate("", "");
                     smtpClient.Send(emailMessage);
                     smtpClient.Disconnect(true);
                 }
