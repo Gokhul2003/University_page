@@ -7,7 +7,7 @@ namespace WebApplication4
 {
     public partial class Contact : System.Web.UI.Page
     {
-        private readonly string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\GOKHUL.K\source\repos\WebApplication4\WebApplication4\App_Data\ContactSubmissions.mdf;Integrated Security = True";
+        private readonly string connectionString = @"";
 
         protected void Page_Load(object sender, EventArgs e)
         {
