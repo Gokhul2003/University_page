@@ -11,8 +11,8 @@ namespace WebApplication4
 {
     public partial class AdminPanel : System.Web.UI.Page
     {
-        private readonly string contactConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\GOKHUL.K\source\repos\WebApplication4\WebApplication4\App_Data\ContactSubmissions.mdf;Integrated Security=True";
-        private readonly string blogConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\GOKHUL.K\source\repos\WebApplication4\WebApplication4\App_Data\Database1.mdf;Integrated Security=True";
+        private readonly string contactConnectionString = @"Connection String";
+        private readonly string blogConnectionString = @"Connection String";
 
         protected void Page_Load(object sender, EventArgs e)
         {
